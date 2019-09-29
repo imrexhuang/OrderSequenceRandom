@@ -1,0 +1,7 @@
+﻿################################################################################
+# 這個 .gitignore 檔案由 Microsoft(R) Visual Studio 自動建立。
+################################################################################
+
+/C#版/OrderSequenceRandom/bin/Debug
+/C#版/OrderSequenceRandom/obj/Debug
+/C#版/.vs/OrderSequenceRandom/v15/Server/sqlite3
