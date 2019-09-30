@@ -1,0 +1,32 @@
+
+C#內Random建構子的Environment.TickCount是以毫秒(milliseconds )為單位，Java 5之後Random建構子是以納秒(nanoseconds)為單位
+如果用Java 4之前版本也會有一樣重複的情況發生
+Java版本改成Random random = new Random(System.currentTimeMillis());就會模擬出重複的問題了
+
+
+感謝『台灣 .NET 技術愛好者俱樂部』熱心的先進指導
+https://www.facebook.com/groups/DotNetUserGroupTaiwan/?multi_permalinks=2193021954324244
+
+
+.NET Framework 4.8原始碼
+https://referencesource.microsoft.com/#mscorlib/system/random.cs,5d22f8880fc9f8d9,references
+
+
+Environment.TickCount
+https://docs.microsoft.com/zh-tw/dotnet/api/system.environment.tickcount?view=netframework-4.8
+
+
+Java 1.5原始碼
+https://github.com/eagle518/jdk-source-code/blob/master/jdk5.0_src/j2se/src/share/classes/java/util/Random.java
+
+
+Java 1.4原始碼
+https://github.com/eagle518/jdk-source-code/blob/master/jdk1.4.2_src/java/util/Random.java
+
+
+随机数是骗人的，.Net、Java、C为我作证
+https://mp.weixin.qq.com/s/3CZNE4ZduyN1pdxvqP-7Ng
+
+
+數量級 (時間)
+https://zh.wikipedia.org/wiki/%E6%95%B0%E9%87%8F%E7%BA%A7_(%E6%97%B6%E9%97%B4)
