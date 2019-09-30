@@ -59,7 +59,13 @@ public abstract class AbstractOrderSequenceRandom {
         private synchronized static String createOrderSnRandomInner() {
             SimpleDateFormat sdf = new SimpleDateFormat(FORMAT);
             StringBuffer sb = new StringBuffer();
+			
+			//https://www.zfl9.com/java-lang-util.html
+            //https://mp.weixin.qq.com/s/3CZNE4ZduyN1pdxvqP-7Ng
+            //Random random = new Random(System.currentTimeMillis()); //模擬JDK 5之前版本取號重複問題
+			
             Random random = new Random();
+			
             for (int i = 0; i < numberFor; i++) {
                 sb.append(numberChar.charAt( random.nextInt(numberChar.length()) ));
             }
