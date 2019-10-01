@@ -21,7 +21,10 @@ namespace OrderSequenceRandom
         public String createOrderSnRandom()
         {
             StringBuilder sb = new StringBuilder();
-            Random random = new Random();
+
+            // 產生 Guid 做為 Random Seed
+            int randomSeed = Guid.NewGuid().GetHashCode();
+            Random random = new Random(randomSeed);
 
             for (int i = 0; i < numberFor; i++)
             {
